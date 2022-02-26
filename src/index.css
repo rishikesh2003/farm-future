@@ -39,3 +39,42 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.labour-cards {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 20px;
+  margin: 5px;
+  box-shadow: 1px 1px 5px gray;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  align-items: center;
+}
+
+.card img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.card span {
+  font-weight: bold;
+}
+
+.search-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.search-bar input {
+  padding: 10px;
+}

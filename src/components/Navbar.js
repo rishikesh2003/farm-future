@@ -22,6 +22,9 @@ function Navbar() {
         <li>
           <Link to={"/about"}>About</Link>
         </li>
+        <li>
+          <Link to={"/labours"}>For Labours</Link>
+        </li>
         {user && (
           <>
             <li>

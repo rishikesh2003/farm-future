@@ -1,8 +1,11 @@
+import FarmerDash from "../components/Dashboard/FarmerDash";
+import MerchantDash from "../components/Dashboard/MerchantDash";
 import Navbar from "../components/Navbar";
 import supabase from "../config/client";
 
 function Dashboard() {
   const user = supabase.auth.user();
+
   console.log(user);
   return (
     <>
@@ -13,11 +16,7 @@ function Dashboard() {
       <br />
       <br />
       <br />
-      <div>
-        <h1>Dashboard</h1>
-        <p>Name: {user.user_metadata.name}</p>
-        <p>Role: {user.user_metadata.role}</p>
-      </div>
+      {user.user_metadata.role === "farmer" ? <FarmerDash /> : <MerchantDash />}
     </>
   );
 }
