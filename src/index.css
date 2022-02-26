@@ -40,7 +40,7 @@ a {
   flex-direction: column;
 }
 
-.labour-cards {
+.cards {
   display: flex;
   width: 100%;
   align-items: center;
@@ -49,18 +49,27 @@ a {
 }
 
 .card {
+  width: 270px;
+  min-height: 450px;
   padding: 20px;
   margin: 5px;
   box-shadow: 1px 1px 5px gray;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
+  text-align: start;
+}
+
+.center-image {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .card img {
   width: 100px;
   border-radius: 50%;
+  margin: 10px;
 }
 
 .card span {
@@ -77,4 +86,19 @@ a {
 
 .search-bar input {
   padding: 10px;
+}
+
+.disease-curing {
+  padding: 20px;
+}
+
+.button-holder {
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+}
+
+.disease-curing img {
+  width: 300px;
+  padding: 20px;
 }

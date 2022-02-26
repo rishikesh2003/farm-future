@@ -20,6 +20,9 @@ function FarmerDash() {
       <h2>Links</h2>
       <div className="link-container">
         <li>
+          <Link to={"/your-crops"}>Your Crops</Link>
+        </li>
+        <li>
           <Link to={"/seeds"}>Buy Seeds</Link>
         </li>
         <li>

@@ -19,7 +19,8 @@
   text-transform: uppercase;
 }
 
-.form-container input {
+.form-container input,
+textarea {
   padding: 10px;
   margin: 5px 0;
 }

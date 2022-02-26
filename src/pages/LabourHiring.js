@@ -35,7 +35,7 @@ function LabourHiring() {
           placeholder="Search by district"
         />
       </div>
-      <div className="labour-cards">
+      <div className="cards">
         {filteredData &&
           filteredData.map((labour) => (
             <LabourCard key={labour.id} data={labour} />
