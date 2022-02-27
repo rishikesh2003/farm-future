@@ -188,3 +188,19 @@ a {
   font-weight: bold;
   padding: 10px 0;
 }
+
+iframe {
+  height: 80px;
+  outline: none;
+  border: none;
+}
+
+.agmark-h {
+  padding: 10px 0;
+}
+
+.agmark-h span {
+  padding: 5px;
+  color: white;
+  background: rgb(255, 0, 0);
+}

@@ -17,6 +17,15 @@ function MerchantDash() {
     <div className="dashboard">
       <h1>Merchant Dashboard</h1>
       <hr />
+      <p className="agmark-h">
+        Agmarknet <span>LIVE</span> Data in per Quintal(100Kgs)
+      </p>
+      <iframe
+        width={"100%"}
+        title="market-ticker"
+        src="https://agmarknet.gov.in/agnew/namticker.aspx"
+      />
+      <hr />
       <h2>Links</h2>
       <div className="link-container">
         <li>
