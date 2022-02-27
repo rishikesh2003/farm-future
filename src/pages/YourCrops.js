@@ -6,8 +6,11 @@ import CropCard from "../components/CropCard";
 function YourCrops() {
   const [cropData, setCropData] = useState([]);
   const [mobile, setMobile] = useState("");
+  const [loading, setLoading] = useState("");
+
   useEffect(() => {
     async function populateData() {
+      setLoading(true);
       const user = await supabase.auth.user();
 
       const { data } = await supabase.from("crops").select();
@@ -16,10 +19,17 @@ function YourCrops() {
       );
       await setCropData(filteredData);
       await setMobile(user.user_metadata.mobile);
-      console.log(data);
+      setLoading(false);
     }
     populateData();
   }, []);
+  if (loading) {
+    return (
+      <div className="loading-container-l">
+        <div className="loader"></div>
+      </div>
+    );
+  }
   return (
     <>
       <Navbar />

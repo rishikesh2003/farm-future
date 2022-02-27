@@ -6,17 +6,26 @@ import LabourCard from "../components/LabourCard";
 function LabourHiring() {
   const [labours, setLabours] = useState([]);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     async function populateData() {
+      setLoading(true);
       const { data } = await supabase.from("labours").select();
       await setLabours(data);
-      await console.log(labours);
+      setLoading(false);
     }
     populateData();
   }, []);
   const filteredData = labours.filter((labour) =>
     labour.district.toLowerCase().includes(search)
   );
+  if (loading) {
+    return (
+      <div className="loading-container-l">
+        <div className="loader"></div>
+      </div>
+    );
+  }
   return (
     <>
       <Navbar />

@@ -45,7 +45,11 @@ function FarmersLogin() {
         type="password"
         placeholder="Password"
       />
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <div className="loading-container">
+          <div className="loader"></div>
+        </div>
+      )}
       {error && <p className="error">{error.message}</p>}
       <div className="button-container">
         <div onClick={handleSubmit} className="primary-btn">

@@ -1,6 +1,6 @@
 function CropCard({ data, mobile }) {
   return (
-    <div className="card">
+    <div className="crop-card">
       <div className="center-image">
         <img
           style={{ width: "200px", borderRadius: "unset" }}

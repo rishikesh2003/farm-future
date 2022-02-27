@@ -94,7 +94,11 @@ function Labour() {
             type="text"
             placeholder="Wages / hr(in Rs.)"
           />
-          {loading && <p>Loading...</p>}
+          {loading && (
+            <div className="loading-container">
+              <div className="loader"></div>
+            </div>
+          )}
           {error && <p className="error">{error}</p>}
           {success && <p className="success">{success}</p>}
           <div className="button-container">
