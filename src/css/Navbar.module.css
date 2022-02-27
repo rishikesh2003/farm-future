@@ -38,6 +38,7 @@
 .logo-container {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .logo-container h3 {

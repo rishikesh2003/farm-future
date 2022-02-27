@@ -4,14 +4,21 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import logo from "../images/logo.jpeg";
 import supabase from "../config/client";
+import { useHistory } from "react-router-dom";
 
 function Navbar() {
   const user = supabase.auth.user();
   const [toggle, setHandleToggle] = useState(false);
+  const history = useHistory();
 
   return (
     <div className={styles.navbar}>
-      <div className={styles["logo-container"]}>
+      <div
+        onClick={() => {
+          history.push("/");
+        }}
+        className={styles["logo-container"]}
+      >
         <img className={styles.logo} src={logo} alt="logo" />{" "}
         <h3> Farm Future</h3>
       </div>
@@ -20,7 +27,7 @@ function Navbar() {
           <Link to={"/"}>Home</Link>
         </li>
         <li>
-          <Link to={"#about"}>About</Link>
+          <a href={"/#about"}>About</a>
         </li>
         <li>
           <Link to={"/labours"}>For Labours</Link>

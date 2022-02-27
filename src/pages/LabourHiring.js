@@ -8,6 +8,7 @@ function LabourHiring() {
   const [labours, setLabours] = useState([]);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(false);
+  const [checked, setChecked] = useState(false);
   useEffect(() => {
     async function populateData() {
       setLoading(true);
@@ -17,8 +18,11 @@ function LabourHiring() {
     }
     populateData();
   }, []);
+
   const filteredData = labours.filter((labour) =>
-    labour.district.toLowerCase().includes(search)
+    !checked
+      ? labour.district.toLowerCase().includes(search)
+      : labour.district.toLowerCase().includes(search) && labour.drone === "Yes"
   );
   if (loading) {
     return (
@@ -40,13 +44,24 @@ function LabourHiring() {
       <br />
       <div className="search-bar">
         <input
+          className="search"
           value={search}
           onChange={(e) => {
             setSearch(e.target.value.toLowerCase());
           }}
           type={"text"}
           placeholder="Search by district"
-        />
+        />{" "}
+        <div style={{ marginLeft: "5px" }}>
+          Know to Operate Drone?{" "}
+          <input
+            onChange={() => {
+              setChecked(!checked);
+            }}
+            style={{ minWidth: "unset" }}
+            type={"checkbox"}
+          />
+        </div>
       </div>
       <div className="cards">
         {filteredData &&

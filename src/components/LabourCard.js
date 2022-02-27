@@ -18,6 +18,10 @@ function LabourCard({ data }) {
         <span>District: </span>
         {data.district}
       </p>
+      <p>
+        <span>Know to operate Drone? </span>
+        {data.drone}
+      </p>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import styles from "../css/Form.module.css";
 import { useState } from "react";
 import supabase from "../config/client";
 import { Helmet } from "react-helmet";
+import Select from "react-select";
 
 function Labour() {
   const [name, setName] = useState("");
@@ -10,9 +11,11 @@ function Labour() {
   const [mobile, setMobile] = useState("");
   const [district, setDistrict] = useState("");
   const [wages, setWages] = useState("");
+  const [drone, setDrone] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+
   async function handleSubmit() {
     setLoading(true);
     setError("");
@@ -22,7 +25,8 @@ function Labour() {
       email === "" ||
       mobile === "" ||
       district === "" ||
-      wages === ""
+      wages === "" ||
+      drone === ""
     ) {
       setError("Please fill all the required fields");
     } else {
@@ -37,7 +41,7 @@ function Labour() {
         console.log(error);
         await supabase
           .from("labours")
-          .insert([{ name, email, mobile, district, wages }]);
+          .insert([{ name, email, mobile, district, wages, drone }]);
         if (error) {
           setError(error.message);
         } else {
@@ -97,6 +101,17 @@ function Labour() {
             }}
             type="text"
             placeholder="Wages / hr(in Rs.)"
+          />
+          <p>Know to Operate Drones?</p>
+          <Select
+            value={drone}
+            onChange={(option) => {
+              setDrone(option.value);
+            }}
+            options={[
+              { label: "Yes", value: "Yes" },
+              { label: "No", value: "No" },
+            ]}
           />
           {loading && (
             <div className="loading-container">
