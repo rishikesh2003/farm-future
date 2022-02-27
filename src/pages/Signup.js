@@ -5,6 +5,7 @@ import FarmersSignup from "../components/FarmersSignup";
 import MerchantsSignup from "../components/MerchantsSignup";
 import supabase from "../config/client";
 import { useHistory } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Signup() {
   const history = useHistory();
@@ -20,6 +21,7 @@ function Signup() {
   const [chooser, setChooser] = useState(<FarmersSignup />);
   return (
     <>
+      <Helmet>Farm Future | Signup</Helmet>
       <Navbar />
       <div className={styles["main-container"]}>
         <div className={styles["form-container"]}>

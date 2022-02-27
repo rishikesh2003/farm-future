@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { AiOutlineCamera, AiOutlineUpload } from "react-icons/ai";
 import { useState } from "react";
 // import axios from "axios";
+import { Helmet } from "react-helmet";
 
 function DiseaseCuring() {
   const [img, setImg] = useState("");
@@ -16,6 +17,9 @@ function DiseaseCuring() {
   }
   return (
     <div>
+      <Helmet>
+        <title>Farm Future | Disease Curing</title>
+      </Helmet>
       <Navbar />
       <br />
       <br />

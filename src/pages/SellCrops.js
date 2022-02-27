@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import styles from "../css/Form.module.css";
 import { useState } from "react";
 import supabase from "../config/client";
+import { Helmet } from "react-helmet";
 
 function SellCrop() {
   const [cropName, setCropName] = useState("");
@@ -48,6 +49,9 @@ function SellCrop() {
   }
   return (
     <>
+      <Helmet>
+        <title>Sell Crops</title>
+      </Helmet>
       <Navbar />
       <br />
       <br />

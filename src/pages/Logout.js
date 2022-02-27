@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import supabase from "../config/client";
+import { Helmet } from "react-helmet";
+
 function Logout() {
   const history = useHistory();
   useEffect(() => {
@@ -11,7 +13,14 @@ function Logout() {
     handleSignout();
   }, [history]);
 
-  return <h1>Securely loggging you out....</h1>;
+  return (
+    <>
+      <Helmet>
+        <title>Signout</title>
+      </Helmet>
+      <h1>Securely loggging you out....</h1>
+    </>
+  );
 }
 
 export default Logout;

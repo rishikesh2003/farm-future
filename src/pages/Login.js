@@ -5,6 +5,7 @@ import MerchantsLogin from "../components/MerchantsLogin";
 import { useEffect, useState } from "react";
 import supabase from "../config/client";
 import { useHistory } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function Login() {
   const history = useHistory();
@@ -20,6 +21,9 @@ function Login() {
   const [chooser, setChooser] = useState(<FarmersLogin />);
   return (
     <>
+      <Helmet>
+        <title>Farm Future | Login</title>
+      </Helmet>
       <Navbar />
       <div className={styles["main-container"]}>
         <div className={styles["form-container"]}>

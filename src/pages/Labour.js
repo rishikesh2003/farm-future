@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import styles from "../css/Form.module.css";
 import { useState } from "react";
 import supabase from "../config/client";
+import { Helmet } from "react-helmet";
 
 function Labour() {
   const [name, setName] = useState("");
@@ -50,6 +51,9 @@ function Labour() {
   }
   return (
     <>
+      <Helmet>
+        <title>Labour Registration</title>
+      </Helmet>
       <Navbar />
       <div className={styles["main-container"]}>
         <div className={styles["form-container"]}>

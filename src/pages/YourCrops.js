@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { useState, useEffect } from "react";
 import supabase from "../config/client";
 import CropCard from "../components/CropCard";
+import { Helmet } from "react-helmet";
 
 function YourCrops() {
   const [cropData, setCropData] = useState([]);
@@ -32,6 +33,9 @@ function YourCrops() {
   }
   return (
     <>
+      <Helmet>
+        <title>Farm Future | Your Crops</title>
+      </Helmet>
       <Navbar />
       <br />
       <br />

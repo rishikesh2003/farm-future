@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { useState, useEffect } from "react";
 import supabase from "../config/client";
 import LabourCard from "../components/LabourCard";
+import { Helmet } from "react-helmet";
 
 function LabourHiring() {
   const [labours, setLabours] = useState([]);
@@ -28,6 +29,9 @@ function LabourHiring() {
   }
   return (
     <>
+      <Helmet>
+        <title>Hire Labours</title>
+      </Helmet>
       <Navbar />
       <br />
       <br />
