@@ -9,6 +9,7 @@ function Benefits() {
       <br />
       <br />
       <br />
+      <h1>Benefits Provided by Government</h1>
       {benefits.map((benefit, index) => (
         <div className="benefits-card">
           <div className="center-image">
