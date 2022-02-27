@@ -23,7 +23,7 @@ function FarmerDash() {
           <Link to={"/your-crops"}>Your Crops</Link>
         </li>
         <li>
-          <Link to={"/seeds"}>Buy Seeds</Link>
+          <Link to={"/seeds"}>Seeds for your region</Link>
         </li>
         <li>
           <Link to={"/disease-curing"}>Disease Curing</Link>

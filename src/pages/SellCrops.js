@@ -39,6 +39,8 @@ function SellCrop() {
           hDate: hDate,
           quantity: quantity,
           description: description,
+          mobile: user.user_metadata.mobile,
+          farmer_name: user.user_metadata.name,
           imgURL:
             "https://upload.wikimedia.org/wikipedia/commons/b/b4/Wheat_close-up.JPG",
         },

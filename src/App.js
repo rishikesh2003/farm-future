@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import BuyCrops from "./pages/BuyCrops";
+import ProfitSeeds from "./pages/ProfitSeeds";
 import Dashboard from "./pages/Dashboard";
 import DiseaseCuring from "./pages/DiseaseCuring";
 import Home from "./pages/Home";
@@ -6,6 +8,7 @@ import Labour from "./pages/Labour";
 import LabourHiring from "./pages/LabourHiring";
 import Login from "./pages/Login";
 import Logout from "./pages/Logout";
+import MerchantInstructions from "./pages/MerchantInstructions";
 import SellCrop from "./pages/SellCrops";
 import Signup from "./pages/Signup";
 import YourCrops from "./pages/YourCrops";
@@ -24,6 +27,9 @@ function App() {
         <Route path={"/disease-curing"} component={DiseaseCuring} />
         <Route path={"/sell-crops"} component={SellCrop} />
         <Route path={"/your-crops"} component={YourCrops} />
+        <Route path={"/buy-crops"} component={BuyCrops} />
+        <Route path={"/instructions"} component={MerchantInstructions} />
+        <Route path={"/seeds"} component={ProfitSeeds} />
       </Switch>
     </Router>
   );
