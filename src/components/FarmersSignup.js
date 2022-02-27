@@ -6,6 +6,7 @@ function FarmersSignup() {
   const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -23,6 +24,7 @@ function FarmersSignup() {
         data: {
           name: name,
           role: "farmer",
+          mobile: mobile,
         },
       }
     );
@@ -57,6 +59,14 @@ function FarmersSignup() {
         placeholder="Email Address"
       />
       <input
+        type={"text"}
+        value={mobile}
+        placeholder="Mobile"
+        onChange={(e) => {
+          setMobile(e.target.value);
+        }}
+      />
+      <input
         value={password}
         onChange={(e) => {
           setPassword(e.target.value);
@@ -65,7 +75,7 @@ function FarmersSignup() {
         placeholder="Password"
       />
       {loading && <p>Loading...</p>}
-      {error && <p>{error.message}</p>}
+      {error && <p className="error">{error.message}</p>}
       <div className="button-container">
         <div
           onClick={() => {

@@ -5,6 +5,7 @@ import CropCard from "../components/CropCard";
 
 function YourCrops() {
   const [cropData, setCropData] = useState([]);
+  const [mobile, setMobile] = useState("");
   useEffect(() => {
     async function populateData() {
       const user = await supabase.auth.user();
@@ -14,6 +15,7 @@ function YourCrops() {
         (data) => data.email === user.email
       );
       await setCropData(filteredData);
+      await setMobile(user.user_metadata.mobile);
       console.log(data);
     }
     populateData();
@@ -28,7 +30,7 @@ function YourCrops() {
       <div className="cards">
         {cropData &&
           cropData.map((cropdata) => (
-            <CropCard key={cropdata.id} data={cropdata} />
+            <CropCard key={cropdata.id} data={cropdata} mobile={mobile} />
           ))}
       </div>
     </>

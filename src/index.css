@@ -102,3 +102,15 @@ a {
   width: 300px;
   padding: 20px;
 }
+
+.success {
+  padding: 15px;
+  background: lightgreen;
+  color: green;
+}
+
+.error {
+  padding: 15px;
+  background: rgb(255, 129, 129);
+  color: red;
+}

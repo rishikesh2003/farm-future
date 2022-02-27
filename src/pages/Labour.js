@@ -95,8 +95,8 @@ function Labour() {
             placeholder="Wages / hr(in Rs.)"
           />
           {loading && <p>Loading...</p>}
-          {error && <p>{error}</p>}
-          {success && <p>{success}</p>}
+          {error && <p className="error">{error}</p>}
+          {success && <p className="success">{success}</p>}
           <div className="button-container">
             <div onClick={handleSubmit} className="primary-btn">
               Submit

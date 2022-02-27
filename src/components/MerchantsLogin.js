@@ -46,7 +46,7 @@ function MerchantsLogin() {
         placeholder="Password"
       />
       {loading && <p>Loading...</p>}
-      {error && <p>{error.message}</p>}
+      {error && <p className="error">{error.message}</p>}
       <div className="button-container">
         <div onClick={handleSubmit} className="primary-btn">
           Submit

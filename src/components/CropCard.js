@@ -1,4 +1,4 @@
-function CropCard({ data }) {
+function CropCard({ data, mobile }) {
   return (
     <div className="card">
       <div className="center-image">
@@ -30,6 +30,9 @@ function CropCard({ data }) {
       </p>
       <p>
         <span>Description:</span> {data.description}
+      </p>
+      <p>
+        <span>Contact: </span> {mobile}
       </p>
     </div>
   );
