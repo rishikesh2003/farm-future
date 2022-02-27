@@ -5,6 +5,7 @@ h2 {
 
 .dashboard {
   padding: 20px;
+  line-height: 2;
 }
 
 .link-container {
@@ -16,12 +17,7 @@ h2 {
 }
 
 .link-container li {
-  margin: 0 5px;
-}
-
-.link-container a {
-  text-decoration: underline;
-  color: brown;
+  margin: 20px 5px;
 }
 
 .link-container a:hover {

@@ -16,7 +16,7 @@ function FarmerDash() {
   return (
     <div className="dashboard">
       <h1>Farmer Dashboard</h1>
-      <hr />
+
       <p className="agmark-h">
         Agmarknet <span>LIVE</span> Data in per Quintal(100Kgs)
       </p>
@@ -25,29 +25,39 @@ function FarmerDash() {
         title="market-ticker"
         src="https://agmarknet.gov.in/agnew/namticker.aspx"
       />
-      <hr />
       <h2>Links</h2>
       <div className="link-container">
         <li>
-          <Link to={"/your-crops"}>Your Crops</Link>
+          <Link className="primary-btn" to={"/your-crops"}>
+            Your Crops
+          </Link>
         </li>
         <li>
-          <Link to={"/seeds"}>Seeds for your region</Link>
+          <Link className="primary-btn" to={"/seeds"}>
+            Seeds for your region
+          </Link>
         </li>
         <li>
-          <Link to={"/disease-curing"}>Disease Curing</Link>
+          <Link className="primary-btn" to={"/disease-curing"}>
+            Disease Curing
+          </Link>
         </li>
         <li>
-          <Link to={"/benefits"}>Benefits By Government</Link>
+          <Link className="primary-btn" to={"/benefits"}>
+            Benefits By Government
+          </Link>
         </li>
         <li>
-          <Link to={"/sell-crops"}>Sell Crops</Link>
+          <Link className="primary-btn" to={"/sell-crops"}>
+            Sell Crops
+          </Link>
         </li>
         <li>
-          <Link to={"/labour-hiring"}>Labour Hiring</Link>
+          <Link className="primary-btn" to={"/labour-hiring"}>
+            Labour Hiring
+          </Link>
         </li>
       </div>
-      <hr />
       <h2>Details</h2>
       {user.user_metadata !== undefined ? (
         <div>

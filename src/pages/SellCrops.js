@@ -84,7 +84,7 @@ function SellCrop() {
               setHDate(e.target.value);
             }}
             type="text"
-            placeholder="Harvesting/Harvested Date (dd/mm/yyyy)"
+            placeholder="Harvested Date (dd/mm/yyyy)"
           />
           <input
             value={price}

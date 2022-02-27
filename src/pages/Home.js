@@ -12,7 +12,7 @@ function Home() {
           to make a profit."
         </h1>
         <div className="button-container">
-          <Link className="primary-btn" to={"/about"}>
+          <Link className="primary-btn" to={"#about"}>
             About us
           </Link>
         </div>

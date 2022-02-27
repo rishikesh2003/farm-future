@@ -29,10 +29,14 @@ function MerchantDash() {
       <h2>Links</h2>
       <div className="link-container">
         <li>
-          <Link to={"/buy-crops"}>Buy Crops</Link>
+          <Link className="primary-btn" to={"/buy-crops"}>
+            Buy Crops
+          </Link>
         </li>
         <li>
-          <Link to={"/instructions"}>Instructions</Link>
+          <Link className="primary-btn" to={"/instructions"}>
+            Instructions
+          </Link>
         </li>
       </div>
       <hr />

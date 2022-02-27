@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 li {
@@ -46,6 +46,7 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .card {
@@ -72,7 +73,12 @@ a {
   text-align: start;
 }
 
+.crop-card img {
+  padding-bottom: 20px;
+}
+
 .center-image {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -197,10 +203,33 @@ iframe {
 
 .agmark-h {
   padding: 10px 0;
+  font-size: 20px;
 }
 
 .agmark-h span {
   padding: 5px;
   color: white;
   background: rgb(255, 0, 0);
+}
+
+.benefits-card {
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 1px 1px 5px gray;
+  color: black;
+  text-decoration: none;
+}
+
+.benefits-card .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.benefits-card img {
+  height: 200px;
+}
+
+input {
+  font-size: 18px;
+  min-width: 300px;
 }

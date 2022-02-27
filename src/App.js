@@ -12,6 +12,7 @@ import MerchantInstructions from "./pages/MerchantInstructions";
 import SellCrop from "./pages/SellCrops";
 import Signup from "./pages/Signup";
 import YourCrops from "./pages/YourCrops";
+import Benefits from "./pages/Benefits";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path={"/buy-crops"} component={BuyCrops} />
         <Route path={"/instructions"} component={MerchantInstructions} />
         <Route path={"/seeds"} component={ProfitSeeds} />
+        <Route path={"/benefits"} component={Benefits} />
       </Switch>
     </Router>
   );
