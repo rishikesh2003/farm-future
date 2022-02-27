@@ -33,6 +33,7 @@ function MerchantDash() {
           <p>Name: {user.user_metadata.name}</p>
           <p>Role: {user.user_metadata.role.toUpperCase()}</p>
           <p>Email {user.email}</p>
+          <p>Mobile: {user.user_metadata.mobile}</p>
         </div>
       ) : (
         ""

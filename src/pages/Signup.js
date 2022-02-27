@@ -21,7 +21,9 @@ function Signup() {
   const [chooser, setChooser] = useState(<FarmersSignup />);
   return (
     <>
-      <Helmet>Farm Future | Signup</Helmet>
+      <Helmet>
+        <title>Farm Future | Signup</title>
+      </Helmet>
       <Navbar />
       <div className={styles["main-container"]}>
         <div className={styles["form-container"]}>
