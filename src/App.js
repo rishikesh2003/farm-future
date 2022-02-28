@@ -14,6 +14,7 @@ import Signup from "./pages/Signup";
 import YourCrops from "./pages/YourCrops";
 import Benefits from "./pages/Benefits";
 import DiseasePage from "./pages/DiseasePage";
+import BuyNow from "./pages/FarmerDetails";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path={"/seeds"} component={ProfitSeeds} />
         <Route path={"/benefits"} component={Benefits} />
         <Route path={"/disease-curing/:id"} component={DiseasePage} />
+        <Route path={"/buy-now/:email"} component={BuyNow} />
       </Switch>
     </Router>
   );

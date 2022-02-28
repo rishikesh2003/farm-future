@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function MerchantCropCard({ data }) {
   return (
     <div className="crop-card">
@@ -38,7 +40,9 @@ function MerchantCropCard({ data }) {
         <span>Description:</span> {data.description}
       </p>
       <div className="button-container">
-        <div className="primary-btn">Buy Now</div>
+        <Link to={`/buy-now/${data.email}`} className="primary-btn">
+          Buy Now
+        </Link>
       </div>
     </div>
   );
