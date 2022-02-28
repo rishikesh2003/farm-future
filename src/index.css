@@ -143,6 +143,7 @@ a {
 }
 
 .loading-container {
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -276,4 +277,13 @@ footer {
 .region-area {
   padding: 20px;
   line-height: 2;
+}
+
+.details {
+  padding: 20px;
+  line-height: 2;
+}
+
+.details p {
+  font-size: 20px;
 }
