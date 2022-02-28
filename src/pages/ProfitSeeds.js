@@ -49,7 +49,6 @@ function ProfitSeeds() {
   const data = seeds.filter(
     (seed) => seed.name.toLowerCase() === district.toLowerCase()
   );
-  console.log(data);
   return (
     <>
       <Helmet>

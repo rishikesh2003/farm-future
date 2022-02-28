@@ -72,6 +72,17 @@ function Diseases() {
           ))}
         </div>
       </div>
+      <p style={{ fontSize: "20px", color: "brown", padding: "0 20px" }}>
+        If none of the details provided above dosen't help you please contact
+      </p>
+      <div style={{ padding: "20px", display: "flex" }}>
+        <div style={{ width: "250px" }} className="card">
+          Kisan Call Center : 1800-180-1551
+        </div>
+        <div style={{ width: "250px" }} className="card">
+          You can also ask assistance from our AI chatbot for more help!
+        </div>
+      </div>
     </>
   );
 }

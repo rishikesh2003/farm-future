@@ -9,7 +9,6 @@ function MerchantDash() {
     async function populateData() {
       const user = await supabase.auth.user();
       await setUser(user);
-      console.log(user);
     }
     populateData();
   }, []);

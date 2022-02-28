@@ -37,8 +37,6 @@ function Labour() {
         }
       });
       if (error === "") {
-        console.log("in");
-        console.log(error);
         await supabase
           .from("labours")
           .insert([{ name, email, mobile, district, wages, drone }]);

@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 
 function MerchantCropCard({ data }) {
+  let min = Math.ceil(4);
+  let max = Math.floor(5);
+  const random = Math.floor(Math.random() * (max - min + 1)) + min;
+  function getStars() {
+    let stars = "";
+    for (let i = 1; i <= random; i++) {
+      stars += "⭐";
+    }
+    return stars;
+  }
   return (
     <div className="crop-card">
       <div className="center-image">
@@ -38,6 +48,9 @@ function MerchantCropCard({ data }) {
       </p>
       <p>
         <span>Description:</span> {data.description}
+      </p>
+      <p>
+        <span>Rating: {getStars()}</span>
       </p>
       <div className="button-container">
         <Link to={`/buy-now/${data.email}`} className="primary-btn">
