@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Navbar from "../components/Navbar";
 import Select from "react-select";
+import seeds from "../data/seed";
 
 function ProfitSeeds() {
   const [district, setDistrict] = useState("");
@@ -45,12 +46,18 @@ function ProfitSeeds() {
     { value: "Viluppuram", label: "Viluppuram" },
     { value: "Virudhunagar", label: "Virudhunagar" },
   ];
+  const data = seeds.filter(
+    (seed) => seed.name.toLowerCase() === district.toLowerCase()
+  );
+  console.log(data);
   return (
     <>
       <Helmet>
         <title>Buy Seeds</title>
       </Helmet>
       <Navbar />
+      <br />
+      <br />
       <br />
       <br />
       <br />
@@ -67,6 +74,26 @@ function ProfitSeeds() {
           options={options}
         />
       </div>
+      {district && (
+        <div className="region-area">
+          <h1>Selected District:</h1>
+          <h2>{district}</h2>
+          <h1>Crops Suitable for this region:</h1>
+          {data[0].seeds.map((d, index) => (
+            <>
+              <li key={index}>{d[0].toUpperCase() + d.slice(1)}</li>
+            </>
+          ))}
+          <h1>Possible diseases for this region:</h1>
+          {data[0].diseases.map((d, index) => (
+            <>
+              <li key={index}>{d}</li>
+            </>
+          ))}
+          <h1>Solution for the diseases:</h1>
+          {data[0].solutions}
+        </div>
+      )}
     </>
   );
 }

@@ -13,6 +13,7 @@ import SellCrop from "./pages/SellCrops";
 import Signup from "./pages/Signup";
 import YourCrops from "./pages/YourCrops";
 import Benefits from "./pages/Benefits";
+import DiseasePage from "./pages/DiseasePage";
 
 function App() {
   return (
@@ -25,13 +26,14 @@ function App() {
         <Route path={"/logout"} component={Logout} />
         <Route path={"/labours"} component={Labour} />
         <Route path={"/labour-hiring"} component={LabourHiring} />
-        <Route path={"/disease-curing"} component={DiseaseCuring} />
+        <Route exact path={"/disease-curing"} component={DiseaseCuring} />
         <Route path={"/sell-crops"} component={SellCrop} />
         <Route path={"/your-crops"} component={YourCrops} />
         <Route path={"/buy-crops"} component={BuyCrops} />
         <Route path={"/instructions"} component={MerchantInstructions} />
         <Route path={"/seeds"} component={ProfitSeeds} />
         <Route path={"/benefits"} component={Benefits} />
+        <Route path={"/disease-curing/:id"} component={DiseasePage} />
       </Switch>
     </Router>
   );

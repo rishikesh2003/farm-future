@@ -28,23 +28,19 @@ function FarmerDash() {
       <h2>Links</h2>
       <div className="link-container">
         <li>
-          <Link className="primary-btn" to={"/your-crops"}>
-            Your Crops
-          </Link>
-        </li>
-        <li>
           <Link className="primary-btn" to={"/seeds"}>
             Seeds for your region
           </Link>
         </li>
+
         <li>
           <Link className="primary-btn" to={"/disease-curing"}>
             Disease Curing
           </Link>
         </li>
         <li>
-          <Link className="primary-btn" to={"/benefits"}>
-            Benefits By Government
+          <Link className="primary-btn" to={"/your-crops"}>
+            Your Crops
           </Link>
         </li>
         <li>
@@ -55,6 +51,11 @@ function FarmerDash() {
         <li>
           <Link className="primary-btn" to={"/labour-hiring"}>
             Labour Hiring
+          </Link>
+        </li>
+        <li>
+          <Link className="primary-btn" to={"/benefits"}>
+            Benefits By Government
           </Link>
         </li>
       </div>

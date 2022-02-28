@@ -268,3 +268,12 @@ footer {
   color: white;
   text-align: center;
 }
+
+.container {
+  padding: 20px;
+}
+
+.region-area {
+  padding: 20px;
+  line-height: 2;
+}

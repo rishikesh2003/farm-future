@@ -30,6 +30,12 @@ function Navbar() {
           <a href={"/#about"}>About</a>
         </li>
         <li>
+          <Link to={"/benefits"}>Benefits</Link>
+        </li>
+        <li>
+          <Link to={"/disease-curing"}>Deseases Cure</Link>
+        </li>
+        <li>
           <Link to={"/labours"}>For Labours</Link>
         </li>
         {user && (
