@@ -287,3 +287,7 @@ footer {
 .details p {
   font-size: 20px;
 }
+
+.prices span {
+  font-weight: bold;
+}

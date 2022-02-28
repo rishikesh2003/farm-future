@@ -62,6 +62,12 @@ function SellCrop() {
       <div className={styles["main-container"]}>
         <div className={styles["form-container"]}>
           <h1>Crop Listing</h1>
+          <h2>Base Prices (per Quintal):</h2>
+          <p className="prices">
+            <span>Rice: Rs.</span> 2630 <span>Wheat: Rs.</span> 1920{" "}
+            <span>Paddy: Rs.</span> 1960
+          </p>
+
           <input
             value={cropName}
             onChange={(e) => {
