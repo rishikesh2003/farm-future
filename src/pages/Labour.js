@@ -57,6 +57,9 @@ function Labour() {
         <title>Labour Registration</title>
       </Helmet>
       <Navbar />
+      <br />
+      <br />
+      <br />
       <div className={styles["main-container"]}>
         <div className={styles["form-container"]}>
           <h1>Labour's Registration</h1>

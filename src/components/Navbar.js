@@ -33,7 +33,7 @@ function Navbar() {
           <Link to={"/benefits"}>Benefits</Link>
         </li>
         <li>
-          <Link to={"/disease-curing"}>Deseases Cure</Link>
+          <Link to={"/disease-curing"}>Diseases Cure</Link>
         </li>
         <li>
           <Link to={"/labours"}>For Labours</Link>
